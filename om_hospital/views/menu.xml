@@ -11,6 +11,7 @@
 <menuitem
         id="menu_hospital_root"
         name="Hospital"
+        web_icon="om_hospital,static/description/dino.png"
         sequence="0"/>
     <menuitem
         id="menu_patient_master"
