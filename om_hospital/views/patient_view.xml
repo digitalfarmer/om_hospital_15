@@ -20,6 +20,11 @@
     </record>
 
 <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
-
+ <menuitem
+        id="menu_patient"
+        name="Patient"
+        parent="menu_patient_master"
+        action="action_hospital_patient"
+        sequence="0"/>
 
 </odoo>
