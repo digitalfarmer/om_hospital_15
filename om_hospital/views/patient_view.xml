@@ -5,6 +5,20 @@
      ade setiawan
 -->
 <odoo>
+<!--    search view-->
+    <record id="hospital_patient_search" model="ir.ui.view">
+       <field name="name">hospital.patient.search</field>
+       <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <search string="">
+              <field name="name" string="Patient Name" filter_domain="['|',('name','ilike',self),('ref','ilike',self)]"/>
+                <field name="ref"/>
+                <field name="age"/>
+                <field name="gender"/>
+            </search>
+       </field>
+    </record>
+
 <!--    odoo form-->
     <record id="patient_view_form" model="ir.ui.view">
         <field name="name">hospital.patient.form</field>
@@ -18,11 +32,11 @@
                         <field name="age"/>
                     </group>
                     <group>
-                        <field name="gender"/>
+                        <field name="ref"/>
+                        <field name="gender" widget="radio"/>
                     </group>
                     </group>
                 </sheet>
-
             </form>
         </field>
     </record>
@@ -36,6 +50,7 @@
                 <field name="name" string="Patient Name"/>
                 <field name="age"/>
                 <field name="gender"/>
+                <field name="ref"/>
             </tree>
         </field>
     </record>
