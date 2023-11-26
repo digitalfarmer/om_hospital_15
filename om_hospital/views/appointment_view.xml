@@ -42,7 +42,11 @@
                         <page string="Pharmacy" name="pharmacy">
                             Pharmacy
                         </page>
-                        <page string="Labs">Labs</page>
+                        <page string="Labs">
+                            <group>
+                            <field name="html_template"/>
+                            </group>
+                        </page>
                     </notebook>
                 </sheet>
                 <!--                chatter -->
