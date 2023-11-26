@@ -51,7 +51,7 @@
         <field name="name">hospital.patient.tree</field>
         <field name="model">hospital.appointment</field>
         <field name="arch" type="xml">
-            <tree string="patient_tree">
+            <tree string="patient_tree" multi_edit="1">
                 <field name="patient_id"/>
                 <field name="appointment_time"/>
                 <field name="reserved_date"/>
