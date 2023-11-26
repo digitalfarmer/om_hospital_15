@@ -12,6 +12,12 @@ class HospitalAppointment(models.Model):
     reserved_date=fields.Date('Reserve', default=fields.Date.context_today)
     ref = fields.Char(string='Reference')
     html_template= fields.Html(string="Html Code")
+    priority=fields.Selection([
+        ('0','Normal'),
+        ('2', 'Low'),
+        ('3', 'High'),
+        ('4', 'Very High'),
+    ], string="Priority", help="give the priority patient")
 
     @api.onchange('patient_id')
     def _onchange_patient_id(self):
