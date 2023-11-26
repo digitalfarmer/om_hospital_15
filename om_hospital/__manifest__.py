@@ -6,7 +6,7 @@
     'category': 'Hospital',
     'summary': 'Hospital Management System',
     'description': 'Hospitl management system',
-    'depends': ['base'],
+    'depends': ['base','mail'],
     'data':[
         'views/menu.xml',
         'views/patient_view.xml',
