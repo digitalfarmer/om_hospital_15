@@ -50,6 +50,8 @@
                         <field name="active" invisible="1"/>
                     </group>
                     </group>
+
+
                 </sheet>
 <!--                chatter -->
                 <div class="oe_chatter">
