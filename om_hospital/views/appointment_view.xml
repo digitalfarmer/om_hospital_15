@@ -27,15 +27,14 @@
                     <group>
                     <group>
                         <field name="patient_id"/>
-                        <field name="appointment_time"/>
                         <field name="reserved_date"/>
                     </group>
                     <group>
-
+                         <field name="appointment_time"/>
                     </group>
                     </group>
                 </sheet>
-<!--                chatter -->
+                <!--                chatter -->
                 <div class="oe_chatter">
                         <field name="message_follower_ids"/>
                         <field name="activity_ids"/>
