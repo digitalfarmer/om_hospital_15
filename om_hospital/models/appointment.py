@@ -6,5 +6,6 @@ class HospitalAppointment(models.Model):
     _description = 'Hospital Appointment'
 
     patient_id=fields.Many2one('hospital.patient',string="Patient")
+    gender = fields.Selection(related="patient_id.gender")
     appointment_time=fields.Datetime('Appointment Date', default=fields.Datetime.now)
     reserved_date=fields.Date('Reserve', default=fields.Date.context_today)
