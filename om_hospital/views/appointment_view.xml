@@ -75,6 +75,7 @@
         <field name="arch" type="xml">
             <tree string="patient_tree" multi_edit="1">
                 <field name="patient_id"/>
+                <field name="priority" widget="priority"/>
                 <field name="appointment_time"/>
                 <field name="reserved_date"/>
                 <field name="gender"/>
