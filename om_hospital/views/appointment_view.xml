@@ -42,6 +42,8 @@
                     </group>
                     <group>
                          <field name="appointment_time"/>
+                        <button type="object" name="action_test" string="Object Klik " class="oe_highlight" />
+                        <button type="action" name="%(om_hospital.action_hospital_patient)d" string="Action" class="oe_highlight" />
                     </group>
                     </group>
                      <notebook>
