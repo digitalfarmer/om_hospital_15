@@ -88,7 +88,8 @@
             <tree string="patient_tree" multi_edit="1" decoration-success="state=='done'">
                 <field name="patient_id"/>
                 <field name="priority" widget="priority"/>
-                <field name="appointment_time"/>
+                <field name="appointment_time" optional="show"/>
+                <field name="activity_ids" widget="list_activity"/>
                 <field name="reserved_date"/>
                 <field name="gender"/>
                 <field name="state"
