@@ -11,7 +11,7 @@ class HospitalAppointment(models.Model):
     appointment_time=fields.Datetime('Appointment Date', default=fields.Datetime.now)
     reserved_date=fields.Date('Reserve', default=fields.Date.context_today)
     ref = fields.Char(string='Reference')
-    html_template= fields.Html(string="Html Code")
+    html_template= fields.Html()
     priority=fields.Selection([
         ('0','Normal'),
         ('2', 'Low'),
