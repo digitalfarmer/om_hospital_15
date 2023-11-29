@@ -20,11 +20,11 @@ class HospitalAppointment(models.Model):
     ], string="Priority", help="give the priority patient")
     state = fields.Selection([
         ('draft', 'Draft'),
-        ('in_consultation', 'In Consultation'),
+        ('in_consultation', 'Processing'),
         ('done', 'Done'),
         ('cancel', 'Canceled'),
     ], string="State", default="draft", required=True)
-    doctor_id=fields.Many2one('res.users', string='Docktor')
+    doctor_id=fields.Many2one('res.users', string='Docktor', tracking=True)
 
     @api.onchange('patient_id')
     def _onchange_patient_id(self):
@@ -39,3 +39,22 @@ class HospitalAppointment(models.Model):
                 'type':'rainbow_man'
             }
         }
+
+    def action_in_consultation(self):
+        for rec in self:
+            rec.state='in_consultation'
+        # print('hello')
+
+    def action_done(self):
+        for rec in self:
+            rec.state='done'
+        # print('hello')
+
+    def action_cancel(self):
+        for rec in self:
+            rec.state='cancel'
+        # print('hello')
+
+    def action_draft(self):
+        for rec in self:
+            rec.state='draft'
