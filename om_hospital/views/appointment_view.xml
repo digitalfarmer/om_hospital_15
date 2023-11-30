@@ -26,11 +26,11 @@
                 <header>
 <!--options="{'clickable':'1'}"-->
 <!--                    status bar -->
-                    <button name="action_in_consultation" string="Process" type="object" states="draft" class="oe_highlight" />
+                    <button name="action_in_consultation" string="Process" type="object" states="draft" class="oe_highlight" data-hotkey="p" />
 <!--                    states="draft" -->
-                    <button name="action_done" string="Done" type="object" states="in_consultation" class="oe_highlight"  />
-                    <button name="action_cancel" string="Cancel" type="object" states="draft,done" class="oe_highlight" />
-                    <button name="action_draft" string="Make to Draft" type="object" states="cancel" />
+                    <button name="action_done" string="Done" type="object" states="in_consultation" class="oe_highlight" data-hotkey="d"   />
+                    <button name="action_cancel" string="Cancel" type="object" states="draft,done" class="oe_highlight" data-hotkey="o"  />
+                    <button name="action_draft" string="Make to Draft" type="object" states="cancel" data-hotkey="z"  />
 
                     <field name="state"
                            widget="statusbar"
