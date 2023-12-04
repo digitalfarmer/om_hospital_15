@@ -53,16 +53,18 @@
                     </group>
                     <group>
                          <field name="appointment_time"/>
-                        <field name="hide_sales_price"/>
+                        <field name="hide_sales_price" groups="base.group_no_one"/>
                         <button type="object"
                                 name="action_test"
                                 help="On Click this print hello message"
                                 string="Object Klik "
+                                groups="base.group_no_one"
                                 confirm="Are You sure Execute Python Code ?"
                                 class="oe_highlight" />
                         <button type="action"
                                 name="%(om_hospital.action_hospital_patient)d"
                                 string="Action"
+                                groups="base.group_no_one"
                                 help="On click this, open the patient record"
                                 confirm="Are You sure Open the Patient ?"
                                 class="oe_highlight" />
