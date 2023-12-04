@@ -38,6 +38,7 @@
         <field name="arch" type="xml">
             <form string="patient_form">
                 <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
                     <group>
                     <group>
                         <field name="name"/>
