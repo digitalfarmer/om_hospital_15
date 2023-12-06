@@ -24,7 +24,8 @@
                          <field name="name" />
                         </group>
                         <group>
-                         <field name="active" widget="boolean_toggle"/>
+                         <field name="color" widget="color_picker"/>
+                            <field name="active" widget="boolean_toggle"/>
                         </group>
 
                     </group>
