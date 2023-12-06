@@ -110,7 +110,7 @@
                         </page>
                         <page string="Labs">
                             <group>
-                            <field name="html_template" options="{'collaborative':true, 'resizable':true}"/>
+                            <field name="html_template" options="{'collaborative':true, 'resizable':true, 'codeview':true}"/>
                             </group>
                         </page>
                     </notebook>
