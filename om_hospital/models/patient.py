@@ -14,6 +14,7 @@ class HospitalPatient(models.Model):
     gender= fields.Selection([('male','Male'),('female','Female')], string='Gender',tracking=True)
     active=fields.Boolean(string="Active", default=True)
     image=fields.Image(string="image")
+    tag_ids=fields.Many2many('patient.tag', string='Tags')
 
     @api.depends('date_of_birth')
     def _compute_age(self):
