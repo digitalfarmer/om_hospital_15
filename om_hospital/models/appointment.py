@@ -54,8 +54,10 @@ class HospitalAppointment(models.Model):
         # print('hello')
 
     def action_cancel(self):
-        for rec in self:
-            rec.state='cancel'
+        action= self.env.ref('om_hospital.cancel_appointment_view_action').read()[0]
+        return action
+        # for rec in self:
+        #     rec.state='cancel'
         # print('hello')
 
     def action_draft(self):
