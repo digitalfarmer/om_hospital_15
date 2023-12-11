@@ -1,0 +1,4 @@
+id,name,active
+patient_tag_umum,UMUM,True
+patient_tag_askes,ASKES,False
+patient_tag_inheath,INHEALTH,True
