@@ -13,8 +13,15 @@ class HospitalPatient(models.Model):
     age= fields.Integer(string='Age', compute="_compute_age", tracking=True)
     gender= fields.Selection([('male','Male'),('female','Female')], string='Gender',tracking=True)
     active=fields.Boolean(string="Active", default=True)
+    appointment_id=fields.Many2one('hospital.appointment',string="Appointments")
     image=fields.Image(string="image")
     tag_ids=fields.Many2many('patient.tag', string='Tags')
+
+    @api.model
+    def create(self, vals):
+        print("create patient")
+        vals['ref']='OMTEST'
+        return super(HospitalPatient, self).create(vals)
 
     @api.depends('date_of_birth')
     def _compute_age(self):
