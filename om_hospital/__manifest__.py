@@ -10,6 +10,7 @@
     'data':[
         'security/ir.model.access.csv',
         'data/patient.tag.csv',
+        'data/sequence_data.xml',
         'wizard/cancel_appointment_view.xml',
         'data/patient_tag_data.xml',
         'views/menu.xml',
