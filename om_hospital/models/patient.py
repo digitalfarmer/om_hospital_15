@@ -8,6 +8,7 @@ class HospitalPatient(models.Model):
     _description = 'Hospital Patient'
     _rec_name = 'ref'
 
+    # id= fields.Integer(string='ID Custom', required=True)
     name = fields.Char(string='Name', tracking=True)
     date_of_birth = fields.Date('Date of Birth')
     ref = fields.Char(string='Reference')
@@ -36,3 +37,6 @@ class HospitalPatient(models.Model):
                 rec.age=today.year-rec.date_of_birth.year
             else:
                 rec.age=0
+
+# xpath
+
